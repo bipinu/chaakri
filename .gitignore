@@ -1,5 +1,5 @@
-assets/*
-!assets/.gitignore
+www/assets/*
+!www/assets/.gitignore
 protected/runtime/*
 !protected/runtime/.gitignore
 protected/data/*.db
