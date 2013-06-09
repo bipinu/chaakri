@@ -48,7 +48,7 @@
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by Chaakri.<br/>
+		Copyright &copy; <?php echo date('Y'); ?> by Chaakriii.<br/>
 		All Rights Reserved.<br/>
 		<?php echo Yii::powered(); ?> & <a href="https://github.com/bipinu/chaakri/">Chaakri</a>
 	</div><!-- footer -->
