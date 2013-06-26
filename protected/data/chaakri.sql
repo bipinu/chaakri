@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `job`
 --
 
-CREATE TABLE IF NOT EXISTS `job` (
+CREATE TABLE IF NOT EXISTS `tbl_job` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `job_title` varchar(255) NOT NULL,
   `company_name` varchar(255) NOT NULL,
@@ -47,10 +47,10 @@ CREATE TABLE IF NOT EXISTS `job` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `job_category`
+-- Table structure for table `tbl_job_category`
 --
 
-CREATE TABLE IF NOT EXISTS `job_category` (
+CREATE TABLE IF NOT EXISTS `tbl_job_category` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `category` varchar(200) NOT NULL,
   `active` tinyint(4) NOT NULL,
@@ -61,10 +61,10 @@ CREATE TABLE IF NOT EXISTS `job_category` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `job_category_mapping`
+-- Table structure for table `tbl_job_category_mapping`
 --
 
-CREATE TABLE IF NOT EXISTS `job_category_mapping` (
+CREATE TABLE IF NOT EXISTS `tbl_job_category_mapping` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `job_id` int(10) unsigned NOT NULL,
   `category_id` int(10) unsigned NOT NULL,
@@ -74,10 +74,10 @@ CREATE TABLE IF NOT EXISTS `job_category_mapping` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `job_city`
+-- Table structure for table `tbl_job_city`
 --
 
-CREATE TABLE IF NOT EXISTS `job_city` (
+CREATE TABLE IF NOT EXISTS `tbl_job_city` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `city` varchar(255) NOT NULL,
   `active` tinyint(3) unsigned NOT NULL,
@@ -88,10 +88,10 @@ CREATE TABLE IF NOT EXISTS `job_city` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `job_city_mapping`
+-- Table structure for table `tbl_job_city_mapping`
 --
 
-CREATE TABLE IF NOT EXISTS `job_city_mapping` (
+CREATE TABLE IF NOT EXISTS `tbl_job_city_mapping` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `job_id` int(10) unsigned NOT NULL,
   `city_id` int(10) unsigned NOT NULL,
@@ -101,10 +101,10 @@ CREATE TABLE IF NOT EXISTS `job_city_mapping` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `job_job_type_mapping`
+-- Table structure for table `tbl_job_job_type_mapping`
 --
 
-CREATE TABLE IF NOT EXISTS `job_job_type_mapping` (
+CREATE TABLE IF NOT EXISTS `tbl_job_job_type_mapping` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `job_id` int(10) unsigned NOT NULL,
   `job_type_id` int(10) unsigned NOT NULL,
@@ -114,10 +114,10 @@ CREATE TABLE IF NOT EXISTS `job_job_type_mapping` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `job_type`
+-- Table structure for table `tbl_job_type`
 --
 
-CREATE TABLE IF NOT EXISTS `job_type` (
+CREATE TABLE IF NOT EXISTS `tbl_job_type` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `type` varchar(200) NOT NULL,
   `active` tinyint(3) unsigned NOT NULL,
@@ -128,10 +128,10 @@ CREATE TABLE IF NOT EXISTS `job_type` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `profile`
+-- Table structure for table `tbl_profile`
 --
 
-CREATE TABLE IF NOT EXISTS `profile` (
+CREATE TABLE IF NOT EXISTS `tbl_profile` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -152,10 +152,10 @@ CREATE TABLE IF NOT EXISTS `profile` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Table structure for table `tbl_user`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
+CREATE TABLE IF NOT EXISTS `tbl_user` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `email` varchar(250) NOT NULL,
   `password` char(64) NOT NULL,
@@ -174,8 +174,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 -- Constraints for table `profile`
 --
-ALTER TABLE `profile`
-  ADD CONSTRAINT `profile_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `tbl_profile`
+  ADD CONSTRAINT `profile_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
