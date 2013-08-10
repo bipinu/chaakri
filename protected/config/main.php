@@ -4,28 +4,32 @@
 // Yii::setPathOfAlias('local','path/to/local-folder');
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+Yii::setPathOfAlias('bootstrap', dirname(__FILE__) . '/../extensions/bootstrap');
+//Yii::app()->bootstrap()->register();
+//Yii::app()->bootstrap()->init();
+
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
     'name' => 'Chaakri - The job app',
     //'defaultController' => 'myController/myAction',
     // preloading 'log' component
-    'preload' => array('log', 'foundation'),
+    'preload' => array('log', 'bootstrap'),
     // autoloading model and component classes
     'import' => array(
         'application.models.*',
         'application.components.*',
     ),
+    'theme'=>'bootstrap',
     'modules' => array(
         // uncomment the following to enable the Gii tool
         /**/
         'gii' => array(
+            'generatorPaths' => array('bootstrap.gii'),
+            // 'generatorPaths'=>array('foundation.gii'),
             'class' => 'system.gii.GiiModule',
             'password' => false,
             // If removed, Gii defaults to localhost only. Edit carefully to taste.
             'ipFilters' => array('127.0.0.1', '::1'),
-            /*'generatorPaths'=>array(
-                'foundation.gii',
-            ),*/
         ),
     /**/
     ),
@@ -45,7 +49,8 @@ return array(
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ),
         ),
-        'foundation' => array("class" => "ext.foundation.components.Foundation"),
+        'bootstrap' => array('class' => 'bootstrap.components.Bootstrap'),
+        //'foundation' => array("class" => "ext.foundation.components.Foundation"),
         'db' => array(
             'connectionString' => 'mysql:host=localhost;dbname=chaakri',
             'emulatePrepare' => true,
@@ -62,12 +67,13 @@ return array(
             'routes' => array(
                 array(
                     'class' => 'CFileLogRoute',
-                    'levels' => 'error, warning',
+//                    'levels' => 'error, warning',
                 ),
-            // uncomment the following to show log messages on web pages
-              array(
-              'class'=>'CWebLogRoute',
-              ),
+                // uncomment the following to show log messages on web pages
+                array(
+                    'class' => 'CWebLogRoute',
+//                    'levels' => 'error, warning',
+                ),
             ),
         ),
     ),
