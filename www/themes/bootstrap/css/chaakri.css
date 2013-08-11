@@ -32,6 +32,12 @@ BODY
 	-webkit-border-radius: 2px;
 	margin-bottom: 25px;
 }
+.chaakriJob:hover
+{
+	-webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
 .chaakriMain .row
 {
 	/*[empty]margin:;*/
