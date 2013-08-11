@@ -9,6 +9,7 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'job-form',
 	'enableAjaxValidation'=>false,
+        'htmlOptions' => array('enctype' => 'multipart/form-data'),
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -35,7 +36,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'company_logo'); ?>
-		<?php echo $form->textField($model,'company_logo',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->fileField($model,'company_logo'); ?>
 		<?php echo $form->error($model,'company_logo'); ?>
 	</div>
 
@@ -79,18 +80,6 @@
 		<?php echo $form->labelEx($model,'perks_offered'); ?>
 		<?php echo $form->textArea($model,'perks_offered',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'perks_offered'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'active'); ?>
-		<?php echo $form->textField($model,'active'); ?>
-		<?php echo $form->error($model,'active'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'date_updated'); ?>
-		<?php echo $form->textField($model,'date_updated'); ?>
-		<?php echo $form->error($model,'date_updated'); ?>
 	</div>
 
 	<div class="row buttons">

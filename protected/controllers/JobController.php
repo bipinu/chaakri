@@ -55,7 +55,19 @@ class JobController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
-
+        
+        //FIXME: MOve it somewhere proper
+        private function slugify($text) {
+            $text = preg_replace('~[^\\pL\d]+~u', '-', $text);
+            $text = trim($text, '-');
+            if (function_exists('iconv'))
+                $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+            $text = strtolower($text);
+            $text = preg_replace('~[^-\w]+~', '', $text);
+            if (empty($text))
+                return 'n-a';
+            return $text;
+        }
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
@@ -70,8 +82,16 @@ class JobController extends Controller
 		if(isset($_POST['Job']))
 		{
 			$model->attributes=$_POST['Job'];
+                        $model->company_logo=CUploadedFile::getInstance($model,'company_logo');
+                        
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+                        {
+                            $file_name=$this->slugify($model->company_name).uniqid().'.'.$model->company_logo->extensionName;
+                                $model->company_logo->saveAs('logos/'.$file_name);
+                                $model->company_logo=$file_name;
+                                $model->save();
+                           	$this->redirect(array('view','id'=>$model->id));
+                        }
 		}
 
 		$this->render('create',array(

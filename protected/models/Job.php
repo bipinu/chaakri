@@ -21,6 +21,7 @@
  */
 class Job extends CActiveRecord
 {
+    public $company_name;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -47,9 +48,11 @@ class Job extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('job_title, company_name, company_url, company_logo, description, minimum_qualification, desirable_qualifications, salary_currency, salary_range_start, salary_range_end, perks_offered, active, date_updated', 'required'),
-			array('salary_range_start, salary_range_end, active', 'numerical', 'integerOnly'=>true),
+			array('job_title, company_name, company_logo, description, minimum_qualification, desirable_qualifications, salary_currency, salary_range_start, salary_range_end, perks_offered', 'required'),
+			
+                        array('salary_range_start, salary_range_end, active', 'numerical', 'integerOnly'=>true),
 			array('job_title, company_name, company_url, company_logo', 'length', 'max'=>255),
+                        array('company_logo','file','types'=>'jpg,gif,png'),
 			array('salary_currency', 'length', 'max'=>250),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
