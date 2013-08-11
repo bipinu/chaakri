@@ -1,3 +1,4 @@
+www/logos/*
 www/assets/*
 !www/assets/.gitignore
 protected/runtime/*
