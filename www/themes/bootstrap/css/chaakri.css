@@ -1,0 +1,116 @@
+BODY
+{
+	background: url(../images/background.png);
+}
+/*HEADER*/
+.navbar
+{
+	background-color: #654A41;
+}
+.navbar LI A
+{
+	color: #FFF;
+}
+.navbar LI A:hover
+{
+	background-color: #FC0;
+	color: #333;
+}
+.nav .caret
+{
+	border-top-color: #FFF;
+	border-bottom-color: #428BCA;
+}
+/*JOB SPECIFIC*/
+.chaakriJob
+{
+	border: 1px solid #CCC;
+	padding: 20px;
+	background-color: #FFF;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	margin-bottom: 25px;
+}
+.chaakriMain .row
+{
+	/*[empty]margin:;*/
+}
+.chaakriJob .jobLogo
+{
+	position: relative;
+	float: none;
+	text-align: center;
+	display: block;
+}
+.chaakriJob .jobCompany
+{
+	margin: 0 auto;
+	width: 50%;
+	display: block;
+}
+.chaakriJob LI, .chaakriJob UL
+{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+.chaakriJob .jobCompany IMG
+{
+	max-height: 70px;
+	margin: 0 auto;
+}
+.chaakriJob .jobPostedOn
+{
+	float: right;
+	color: #666;
+	font-size: 12px;
+	margin: 30px 20px 0px 0px;
+}
+.chaakriJob .jobLocation
+{
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #666;
+}
+.chaakriJob .jobTitle H1
+{
+	font-size: 25px;
+	color: #4D463E;
+}
+.chaakriJob .jobSummary
+{
+	margin-top: 10px;
+	max-height: 70px;
+	min-height: 70px;
+}
+.chaakriJob .jobActions:hover
+{
+	display: inline;
+}
+.chaakriJob .jobActions BUTTON
+{
+	margin-right: 5px;
+	margin-top: 15px;
+	border-color: transparent;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+.chaakriJob .jobActions .btn-primary
+{
+	background-color: #EA7613;
+	/*[empty]text-transform:;*/
+}
+.chaakriJob .jobActions .btn-primary:hover
+{
+	background-color: #CB6610;
+}
+.chaakriJob .jobActions .btn-default
+{
+	background-color: #DDDBCC;
+}
+.chaakriJob .jobActions .btn-default:hover
+{
+	background-color: #C9C5AD;
+}
