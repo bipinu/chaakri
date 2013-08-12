@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `job` (
   `perks_offered` text NOT NULL,
   `active` tinyint(4) NOT NULL,
   `date_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`,`active`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
