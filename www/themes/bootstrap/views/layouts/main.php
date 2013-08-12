@@ -49,7 +49,7 @@
         ?>
 
         <div class="navbar navbar-fixed-top">
-            <a class="navbar-brand" href="/"><img alt="Chaakri" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/chakri_web.png" height="30px" width="100px" /></a>
+            <a class="navbar-brand" href="/">Chaakri</a>
             <form class="navbar-form pull-left" action="">
                 <input type="text" class="form-control col-lg-12" placeholder="Visual Search Here">
             </form>	
