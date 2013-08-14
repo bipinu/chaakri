@@ -10,6 +10,7 @@ If you know how to set up a LAMP (or WAMP or MAMP), just do the following:
 * create a db named "chaakri", with user and password "chaakri" (innovative, eh!)
 * load the DB from "protected/data/chaakri.sql"
 * Enable mod_rewrite in Apache
+* Make sure _protected/runtime_ and _www/assets_ are writeable by the web server
 
 That's it. You're all set.
 
@@ -24,6 +25,8 @@ Setting up development environment
 * Enable mod_rewrite:
 * 	_> a2enmod rewrite_
 * 	_> /etc/init.d/apache2 reload_
+* Make sure _protected/runtime_ and _www/assets_ are writeable by the web server
+*   _> chmod 777 protected/runtime www/assets_
 
 If your are using any other flavour, DuckDuckGo it.
 
