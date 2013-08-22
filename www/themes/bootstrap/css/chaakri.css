@@ -10,9 +10,6 @@ BODY
 .navbar li a
 {
     color: #FFF;
-}.navbar li ul li a
-{
-    color: #000;
 }
 .navbar li a:hover
 {
