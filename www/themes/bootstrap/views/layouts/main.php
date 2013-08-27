@@ -57,7 +57,7 @@
                 <ul class="nav navbar-nav pull-right">
                     <li><a href="#">Link</a></li>
                     <li class="drop down">
-                        <a href="#" class="dropdown-toggle" data-toggle="drop down">Rajnikanth <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rajnikanth <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Profile</a></li>
                             <li><a href="#">Log Out</a></li>

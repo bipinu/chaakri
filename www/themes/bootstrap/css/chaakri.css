@@ -16,6 +16,10 @@ BODY
     background-color: #FC0;
     color: #333;
 }
+.navbar li ul li a
+{
+    color: #000;
+ } 
 a.navbar-brand
 {
     background-image: url(/themes/bootstrap/images/chakri_web.png);
